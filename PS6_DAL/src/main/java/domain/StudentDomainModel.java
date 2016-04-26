@@ -32,16 +32,6 @@ public class StudentDomainModel  {
 		DOB = dOB;		
 	}
 
-	public StudentDomainModel(StudentDomainModel stu)
-	{
-		super();
-		this.setStudentID(UUID.randomUUID());		
-		FirstName = stu.getFirstName();
-		MiddleName = stu.getMiddleName();
-		LastName = stu.getLastName();
-		DOB = stu.getDOB();
-		
-	}
 	
 	/**
 	 * Student - This constructor will retrieve a give student ID's record.
