@@ -3,6 +3,8 @@ package ch.makery.address.util;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.temporal.TemporalAccessor;
+import java.util.Date;
 
 /**
  * Helper functions for handling dates.
@@ -25,11 +27,11 @@ public class DateUtil {
      * @param date the date to be returned as a string
      * @return formatted string
      */
-    public static String format(LocalDate date) {
+    public static String format(Date date) {
         if (date == null) {
             return null;
         }
-        return DATE_FORMATTER.format(date);
+        return DATE_FORMATTER.format((TemporalAccessor) date);
     }
 
     /**
@@ -59,4 +61,9 @@ public class DateUtil {
         // Try to parse the String.
         return DateUtil.parse(dateString) != null;
     }
+
+	public static Date makeDate(LocalDate parse) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

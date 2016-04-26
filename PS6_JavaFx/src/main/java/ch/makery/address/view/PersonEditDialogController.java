@@ -105,7 +105,7 @@ public class PersonEditDialogController {
             person.setStreet(streetField.getText());
             person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
             person.setCity(cityField.getText());
-            person.setBirthday(DateUtil.parse(birthdayField.getText()));
+            person.setBirthday(DateUtil.makeDate(DateUtil.parse(birthdayField.getText())));
             okClicked = true;
             dialogStage.close();
         }
